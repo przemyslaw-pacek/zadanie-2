@@ -1,3 +1,24 @@
+# Walidator numeru PESEL
+
+![image](./printscreen.png)
+
+## Description
+
+This is an application that checks the correctness of the PESEL number.
+
+## Demo
+
+If you want to check, clik [here](https://przemyslaw-pacek.github.io/zadanie-2/).
+
+## Technologies:
+
+- HTML
+- CSS
+- JavaScript
+- Normalize
+- React
+- Styled-components
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
