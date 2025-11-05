@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Content, Input, StyledForm } from "./styled";
+import { Content, Input, Message, StyledForm } from "./styled";
 
 function Form() {
   const [pesel, setPesel] = useState("");
@@ -20,8 +20,8 @@ function Form() {
     event.preventDefault();
 
     validatePesel(pesel)
-      ? setInfo("✅ Numer PESEL jest poprawny")
-      : setInfo("❌ Numer PESEL jest niepoprawny");
+      ? setInfo(<Message>Numer PESEL jest poprawny</Message>)
+      : setInfo(<Message $incorrect>Numer PESEL jest niepoprawny</Message>);
   };
 
   return (
@@ -37,7 +37,7 @@ function Form() {
           placeholder="Wpisz PESEL"
         />
         <button>Sprawdź</button>
-        {info && <p>{info}</p>}
+        {info}
       </Content>
     </StyledForm>
   );
