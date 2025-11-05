@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledForm = styled.form`
   text-align: center;
@@ -11,5 +11,16 @@ export const Content = styled.span`
 
 export const Input = styled.input`
   max-width: 120px;
-  font-weight: 900;
+  font-weight: bold;
+`;
+
+export const Message = styled.p`
+  font-size: 28px;
+  color: lightgreen;
+
+  ${({ $incorrect }) =>
+    $incorrect &&
+    css`
+      color: red;
+    `}
 `;
