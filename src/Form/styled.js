@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components";
 
 export const StyledForm = styled.form`
+  border: 2px solid darkgrey;
+  border-radius: 5px;
   text-align: center;
   padding: 20px;
 `;
