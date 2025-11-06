@@ -29,7 +29,7 @@ function Form() {
       <h1>Walidator numeru PESEL</h1>
       <Content>
         <Input
-          type="string"
+          type="text"
           minLength={11}
           maxLength={11}
           value={pesel}
