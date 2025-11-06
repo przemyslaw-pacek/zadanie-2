@@ -7,7 +7,7 @@ export const StyledForm = styled.form`
   padding: 20px;
 `;
 
-export const Content = styled.span`
+export const Content = styled.div`
   font-size: 20px;
 `;
 
