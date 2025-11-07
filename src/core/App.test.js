@@ -8,7 +8,7 @@ describe("Walidacja numeru PESEL", () => {
     const input = screen.getByPlaceholderText(/Wpisz PESEL/i);
     const button = screen.getByRole("button", { name: /Sprawdź/i });
 
-    fireEvent.change(input, { target: { value: "44051401359" } });
+    fireEvent.change(input, { target: { value: "00222900009" } });
     fireEvent.click(button);
 
     expect(screen.getByText(/poprawny/i)).toBeInTheDocument();
