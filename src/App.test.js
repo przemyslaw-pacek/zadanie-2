@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import App from "./App";
+import App from "./App/App";
 
 describe("Walidacja numeru PESEL", () => {
   test("poprawny numer PESEL zwraca komunikat pozytywny", () => {

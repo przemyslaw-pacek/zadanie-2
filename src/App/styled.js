@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const StyledForm = styled.form`
+export const Form = styled.form`
   border: 2px solid darkgrey;
   border-radius: 5px;
   text-align: center;
@@ -12,7 +12,7 @@ export const Content = styled.div`
 `;
 
 export const Input = styled.input`
-  max-width: 120px;
+  max-width: 110px;
   font-weight: bold;
 `;
 

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Content, Input, Message, StyledForm } from "./styled";
 import isPeselValid from "./isPeselValid";
+import { Content, Form, Input, Message } from "./styled";
 
-function Form() {
+function App() {
   const [pesel, setPesel] = useState("");
   const [info, setInfo] = useState("");
 
@@ -15,7 +15,7 @@ function Form() {
   };
 
   return (
-    <StyledForm onSubmit={onFormSubmit}>
+    <Form onSubmit={onFormSubmit}>
       <h1>Walidator numeru PESEL</h1>
       <Content>
         <Input
@@ -30,8 +30,8 @@ function Form() {
         <button>Sprawdź</button>
         {info}
       </Content>
-    </StyledForm>
+    </Form>
   );
 }
 
-export default Form;
+export default App;
