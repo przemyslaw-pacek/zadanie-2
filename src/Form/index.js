@@ -1,25 +1,15 @@
 import { useState } from "react";
 import { Content, Input, Message, StyledForm } from "./styled";
+import isPeselValid from "./isPeselValid";
 
 function Form() {
   const [pesel, setPesel] = useState("");
   const [info, setInfo] = useState("");
 
-  const validatePesel = (pesel) => {
-    if (!/^\d{11}$/.test(pesel)) return false;
-
-    const digits = pesel.split("").map(Number);
-    const weights = [1, 3, 7, 9, 1, 3, 7, 9, 1, 3];
-    const sum = weights.reduce((acc, v, i) => acc + v * digits[i], 0);
-    const checksum = (10 - (sum % 10)) % 10;
-
-    return checksum === digits[10];
-  };
-
   const onFormSubmit = (event) => {
     event.preventDefault();
 
-    validatePesel(pesel)
+    isPeselValid(pesel)
       ? setInfo(<Message>Numer PESEL jest poprawny</Message>)
       : setInfo(<Message $incorrect>Numer PESEL jest niepoprawny</Message>);
   };
@@ -30,10 +20,11 @@ function Form() {
       <Content>
         <Input
           type="text"
-          minLength={11}
+          inputMode="numeric"
           maxLength={11}
+          minLength={11}
           value={pesel}
-          onChange={({ target }) => setPesel(target.value)}
+          onChange={({ target }) => setPesel(target.value.replace(/\D/g, ""))}
           placeholder="Wpisz PESEL"
         />
         <button>Sprawdź</button>
