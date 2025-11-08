@@ -11,13 +11,20 @@ function isPeselValid(pesel) {
   const dd = digit[4] * 10 + digit[5];
 
   let year;
-  if (mm >= 1 && mm <= 12) year = 1900 + yy;
-  else if (mm >= 81 && mm <= 92) {
-    year = 1800 + yy;
-    mm -= 80;
+  if (mm >= 1 && mm <= 12) {
+    year = 1900 + yy;
   } else if (mm >= 21 && mm <= 32) {
     year = 2000 + yy;
     mm -= 20;
+  } else if (mm >= 41 && mm <= 52) {
+    year = 2100 + yy;
+    mm -= 40;
+  } else if (mm >= 61 && mm <= 72) {
+    year = 2200 + yy;
+    mm -= 60;
+  } else if (mm >= 81 && mm <= 92) {
+    year = 1800 + yy;
+    mm -= 80;
   } else return false;
 
   const date = new Date(year, mm - 1, dd);
