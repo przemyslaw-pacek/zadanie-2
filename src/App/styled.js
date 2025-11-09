@@ -12,7 +12,7 @@ export const Content = styled.div`
 `;
 
 export const Input = styled.input`
-  max-width: 110px;
+  max-width: 118px;
   font-weight: bold;
 `;
 
