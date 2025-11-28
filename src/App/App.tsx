@@ -4,9 +4,9 @@ import { Content, Form, Input, Message } from "./styled";
 
 function App() {
   const [pesel, setPesel] = useState("");
-  const [info, setInfo] = useState("");
+  const [info, setInfo] = useState<React.ReactNode>("");
 
-  const onFormSubmit = (event) => {
+  const onFormSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
 
     isPeselValid(pesel)

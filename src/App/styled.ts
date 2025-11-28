@@ -16,7 +16,9 @@ export const Input = styled.input`
   font-weight: bold;
 `;
 
-export const Message = styled.p`
+export const Message = styled.p<{
+  $incorrect?: Boolean;
+}>`
   font-size: 28px;
   color: lightgreen;
 

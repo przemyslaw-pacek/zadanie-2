@@ -1,4 +1,4 @@
-function isPeselValid(pesel) {
+function isPeselValid(pesel: string) {
   if (!/^\d{11}$/.test(pesel)) return false;
 
   const digit = pesel.split("").map(Number);
