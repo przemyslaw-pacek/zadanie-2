@@ -15,6 +15,7 @@ If you want to check, clik [here](https://przemyslaw-pacek.github.io/zadanie-2/)
 - HTML
 - CSS
 - JavaScript
+- TypeScript
 - Normalize
 - React
 - Styled-components
