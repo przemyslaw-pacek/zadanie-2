@@ -4,10 +4,12 @@ export const Form = styled.form`
   border: 2px solid darkgrey;
   border-radius: 5px;
   text-align: center;
+  margin: 10px;
   padding: 20px;
 `;
 
 export const Content = styled.div`
+  margin-bottom: 20px;
   font-size: 20px;
 `;
 
